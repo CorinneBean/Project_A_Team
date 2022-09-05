@@ -1,7 +1,8 @@
-DROP TABLE IF EXISTS intake_csv;
-
+--ACC intake and outcome data
 
 --Create intake table
+DROP TABLE IF EXISTS intake_csv;
+
 CREATE TABLE intake_csv (
 	Index_ID_intake INT NOT NULL,
 	Animal_ID_intake VARCHAR NOT NULL,
@@ -28,11 +29,13 @@ CREATE TABLE intake_csv (
 	
 );
 
+--verify records
 select * from intake_csv;
-	
-DROP TABLE IF EXISTS outcome_csv;
+
 
 --Create outcome table
+DROP TABLE IF EXISTS outcome_csv;
+
  CREATE TABLE outcome_csv (
 	Index_ID_outcome INT NOT NULL,
 	Animal_ID_outcome VARCHAR NOT NULL,
@@ -58,10 +61,11 @@ DROP TABLE IF EXISTS outcome_csv;
 	PRIMARY KEY (animal_id_outcome, order_of_outcome)
 	);	
 	
+--verify records
 select * from outcome_csv;
 
---create combined table
 
+--create combined table
 DROP TABLE IF EXISTS acc_intake_outcome;
 
 select intake_csv.*,outcome_csv.*
@@ -69,10 +73,44 @@ select intake_csv.*,outcome_csv.*
 INTO acc_intake_outcome
 
 From intake_csv 
-LEFT JOIN outcome_csv
+INNER JOIN outcome_csv
 ON intake_csv.animal_id_intake=outcome_csv.animal_id_outcome and 
 intake_csv.order_of_intake=outcome_csv.order_of_outcome
 
+--verify records
+select * from acc_intake_outcome;
 
-select * from acc_intake_outcome
 	
+--create table for intake not with outcome
+DROP TABLE IF EXISTS acc_intake_available;
+
+select Index_ID_intake,
+	Animal_ID_intake,
+	DateTime_intake,
+	MonthYear_intake,
+	Found_Location,
+	Intake_Type,
+	Intake_Condition,
+	Animal_Type_intake,
+	Sex_upon_Intake,
+	Age_upon_Intake,
+	Breed_intake,
+	Color_intake,
+	"Age_Upon_Intake(days)",
+	"Age_Upon_Intake(years)",
+	Age_Range_intake,
+	Intake_Month,
+	Intake_Year,
+	Intake_Weekday,
+	Intake_Hour,
+	Intake_Frequency,
+	Order_of_Intake
+INTO acc_intake_available
+
+From intake_csv 
+Left Outer Join outcome_csv
+ON intake_csv.animal_id_intake=outcome_csv.animal_id_outcome and 
+intake_csv.order_of_intake=outcome_csv.order_of_outcome
+Where outcome_csv.animal_id_outcome IS NULL;
+
+select * from acc_intake_available
