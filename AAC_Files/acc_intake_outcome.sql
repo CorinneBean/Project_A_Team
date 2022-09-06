@@ -4,6 +4,7 @@
 DROP TABLE IF EXISTS intake_csv;
 
 CREATE TABLE intake_csv (
+	PRIMARY KEY (animal_id_intake, order_of_intake),
 	Index_ID_intake INT NOT NULL,
 	Animal_ID_intake VARCHAR NOT NULL,
 	DateTime_intake timestamp without time zone,
@@ -24,9 +25,7 @@ CREATE TABLE intake_csv (
 	Intake_Weekday VARCHAR,
 	Intake_Hour INT,
 	Intake_Frequency INT,
-	Order_of_Intake INT,
-	PRIMARY KEY (animal_id_intake, order_of_intake)
-	
+	Order_of_Intake INT
 );
 
 --verify records
@@ -37,6 +36,7 @@ select * from intake_csv;
 DROP TABLE IF EXISTS outcome_csv;
 
  CREATE TABLE outcome_csv (
+	PRIMARY KEY (animal_id_outcome, order_of_outcome)
 	Index_ID_outcome INT NOT NULL,
 	Animal_ID_outcome VARCHAR NOT NULL,
 	DateTime_outcome timestamp without time zone,
@@ -57,8 +57,7 @@ DROP TABLE IF EXISTS outcome_csv;
 	"Age_Upon_Outcome(years)" numeric,
 	Age_Range_outcome VARCHAR,
 	Outcome_Frequency INT,
-	Order_of_Outcome INT,
-	PRIMARY KEY (animal_id_outcome, order_of_outcome)
+	Order_of_Outcome INT
 	);	
 	
 --verify records
