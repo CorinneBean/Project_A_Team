@@ -27,12 +27,12 @@ The main source of communication for this group was conducted via Zoom and Slack
 #### Machine Learning Model
 The following is a provisional machine learning model which was used during the planning phase.
 
-[ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
+![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
 #### Database
 The following is a provisional database which was used during the planning phase.
 
-[ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
+![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
 
 ## Resources 
 ### Data
