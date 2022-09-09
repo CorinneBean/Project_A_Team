@@ -11,6 +11,20 @@ The Austin Animal Center is located in Austin, Texas, the "No Kill" city in the 
 4.  What type of animal (dog/cat/other) is most likely to be returned to the owner?
 5.  Are transfers mostly purebred animals to breed-specific rescues (not sure this data exists, but perhaps can draw the conclusion)?
 6.  Is there a specific age group more likely to be returned to owner/adopted?
+7.  Average time in shelter?
+8.  Average time in shelter by animal type?
+9.  Average time in shelter by age?
+10. Average dog and cat intake in a week.
+11. Average dog and cat successful outcome in a week.
+12. What day of week is the shelter most likely to adopt?
+13. What month has the most intakes/outcomes?
+14. How are the intakes happening?
+15. Does color play a role in successful outcome?
+16. Does breed play a role in successful outcome?
+17. Distribution of dogs to cats.
+18. Do dogs get adopted faster than cats?
+19. Where in Austin are most intakes coming from?
+20. Demographics of area where most intakes are coming.
 
 ### Roles
 | Roles         | Responsibility     | Name          |
