@@ -26,15 +26,39 @@ ALTER TABLE outcome_df ADD PRIMARY KEY ("animal_id_outcome", "order_of_outcome")
 --verify records
 select * from outcome_df;
 
+
+--zipcodes_df
+--DROP TABLE IF EXISTS zipcodes_df;
+--modify zipcodes_df from Demographic_data.ipynb script
+--drop added index column
+ALTER TABLE zipcodes_df DROP index;
+--change index_id from text to integar
+ALTER TABLE zipcodes_df
+    ALTER COLUMN index_id TYPE bigint
+	USING index_id::bigint
+--add primary keys
+ALTER TABLE zipcodes_df ADD PRIMARY KEY ("index_id");
+--verify records
+select * from zipcodes_df;
+
+
+
+
 --create combined table
 DROP TABLE IF EXISTS acc_intake_outcome;
 
 select intake_df.*,outcome_df.*,
 case when breed_intake LIKE '%Mix%' then 'Mix' when  breed_intake LIKE '%mix%' then 'Mix' else 'Purebred' end as breed_intake_subtype,
+case when breed_intake LIKE '%Mix%' then regexp_replace(breed_intake,'Mix','','g')
+	when breed_intake LIKE '%/%' then regexp_replace(breed_intake,'^([^/]+).*$','\1')
+	else breed_intake end as main_breed_intake,
 case when breed_intake LIKE '%Pit Bull%' then 'Y' else 'N' end as breed_contains_pitbull,
 case when sex_upon_intake LIKE '%Female%' then 'Female' else 'Male' end as sex_upon_intake_subtype,
 datetime_outcome - datetime_intake as time_in_shelter,
-case when split_part((datetime_outcome - datetime_intake)::text,' ',1) LIKE '%:%' then '0' else split_part((datetime_outcome - datetime_intake)::text,' ',1) end as days_in_shelter
+case when split_part((datetime_outcome - datetime_intake)::text,' ',1) LIKE '%:%' then '0' else split_part((datetime_outcome - datetime_intake)::text,' ',1) end as days_in_shelter,
+zipcode as zipcode_intake,
+longitude as longitude_intake,
+latitude as latitude_intake
 
 INTO acc_intake_outcome
 
@@ -42,13 +66,16 @@ From intake_df
 INNER JOIN outcome_df
 ON intake_df.animal_id_intake=outcome_df.animal_id_outcome and 
 intake_df.order_of_intake=outcome_df.order_of_outcome
+LEFT OUTER JOIN zipcodes_df
+ON intake_df.index_id_intake=zipcodes_df.index_id
 
 --change days_in_shelter to numeric
 ALTER TABLE acc_intake_outcome ALTER COLUMN days_in_shelter TYPE NUMERIC(10,0)
             USING COALESCE(NULLIF(days_in_shelter, '')::NUMERIC, 0);
 			
 --verify records
-select * from acc_intake_outcome;			
+select * from acc_intake_outcome
+where NOT zipcode_intake IS NULL;			
 
 --create table for intake not with outcome
 DROP TABLE IF EXISTS acc_intake_available;
@@ -75,10 +102,16 @@ select index_id_intake,
 	intake_frequency,
 	order_of_intake,
 	case when breed_intake LIKE '%Mix%' then 'Mix' when  breed_intake LIKE '%mix%' then 'Mix' else 'Purebred' end as breed_intake_subtype,
+	case when breed_intake LIKE '%Mix%' then regexp_replace(breed_intake,'Mix','','g')
+	when breed_intake LIKE '%/%' then regexp_replace(breed_intake,'^([^/]+).*$','\1')
+	else breed_intake end as main_breed_intake,
 	case when breed_intake LIKE '%Pit Bull%' then 'Y' else 'N' end as breed_contains_pitbull,
 	case when sex_upon_intake LIKE '%Female%' then 'Female' else 'Male' end as sex_upon_intake_subtype,
 	NOW() - datetime_intake as time_in_shelter,
-	case when split_part((NOW() - datetime_intake)::text,' ',1) LIKE '%:%' then '0' else split_part((NOW() - datetime_intake)::text,' ',1) end as days_in_shelter
+	case when split_part((NOW() - datetime_intake)::text,' ',1) LIKE '%:%' then '0' else split_part((NOW() - datetime_intake)::text,' ',1) end as days_in_shelter,
+	zipcode as zipcode_intake,
+	longitude as longitude_intake,
+	latitude as latitude_intake
 
 
 INTO acc_intake_available
@@ -87,14 +120,13 @@ From intake_df
 Left Outer Join outcome_df
 ON intake_df.animal_id_intake=outcome_df.animal_id_outcome and 
 intake_df.order_of_intake=outcome_df.order_of_outcome
+LEFT OUTER JOIN zipcodes_df
+ON intake_df.index_id_intake=zipcodes_df.index_id
 Where outcome_df.animal_id_outcome IS NULL;
 
 --change days_in_shelter to numeric
 ALTER TABLE acc_intake_available ALTER COLUMN days_in_shelter TYPE NUMERIC(10,0)
             USING COALESCE(NULLIF(days_in_shelter, '')::NUMERIC, 0);
 
-select * from acc_intake_available;
-
-
-
-
+select * from acc_intake_available
+--where NOT zipcode_intake IS NULL;
