@@ -113,8 +113,8 @@ The data analysis process began with the consideration of two datasets from Aust
 
 * Hot encoding is performed for each of above categories to get the data ready for ML.
 
-* The data is split into X and y. Where below are the features 
- > X = The hot encoded values of the following features:
+* The data is split into X and y. 
+ - X = The hot encoded values of the following features:
     - age_upon_intake(days)
     - age_upon_outcome(days)
     - days_in_shelter
@@ -122,14 +122,18 @@ The data analysis process began with the consideration of two datasets from Aust
     - color_intake
     - breed_intake
     -intake_type
- > Y = ‘outcome_type’ encoded for Success and Failure.
+ 
+ - Y = *outcome_type* encoded for Success and Failure.
 
-✓ Explanation of model choice, including limitations and benefits.
+**Explanation of model choice, including limitations and benefits.**
 
 We used Logistic Regression and Random Forest Classification models to analyze the data.
-Logistic Regression - is performed when we are expecting a Binary Outcome - Here we are running the ML model to determine if Dog / Cat will have success or Failure as outcome for given categories or features in consideration.
 
-Random Forest Classification - This model produces good predictions, and is capable to handle large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
+**Logistic Regression**
+> Logistic Regression is performed when we are expecting a Binary Outcome. In this project, the ML model was run to determine if Dogs or Cats are more likely to have a successful or unsuccessful outcome.
+
+**Random Forest Classification**
+> This model produces good predictions, and is capable of handling large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
 
 ### ML results For Dogs
 
