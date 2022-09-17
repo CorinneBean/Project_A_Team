@@ -43,7 +43,7 @@ The following is a provisional machine learning model which was used during the 
 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
-#### Data Analysis.(Refer slides for details)
+#### Data Analysis (Refer slides for details)
 
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
 - Austin_Animal_Center_Intakes.csv 
@@ -58,6 +58,22 @@ The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in
 The following is a provisional database which was used during the planning phase.
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
+
+#### Database Integration
+
+For this project, we utilized PostgresSQL and fully integrated the database into our project.
+
+* Database stores static data for use during the project
+  - Database stores multiple data tables used for compiling the final dataset.
+* Database interfaces with the project in some format (e.g., scraping updates the database)
+  - Database interfaces with the project using Jupyter Notebook Pandas and sqlalchemy to export the dfs into the Postgres AAC database and create the   tables. After the tables have been joined and data fields manipulated, sqlalchemy is used to connect to the database and import the final sql table back to Jupyter Notebooks to use for the machine learning.
+  
+* Includes at least two tables (or collections, if using MongoDB)
+  - The AAC database includes three tables used for the final dataset.
+* Includes at least one join using the database language (not including any joins in Pandas)
+  - SQL is used to join the three tables together and perform data manipulation on number, character and date columns.
+* Includes at least one connection string (using SQLAlchemy or PyMongo)
+  - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
 ## Resources 
 ### Data
