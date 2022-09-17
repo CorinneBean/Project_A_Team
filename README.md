@@ -38,12 +38,6 @@ The following is a provisional machine learning model which was used during the 
 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
-<<<<<<< HEAD
-##### ML Data Analysis (Refer slides for details)
-[Intake Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/data) - Intake represents the status of animals as they enter the Animal Center
-
-[Outcome Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data) - Outcome represents the status of animals as they leave the Animal Center
-=======
 #### Data Analysis (Refer slides for details)
 
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
@@ -53,18 +47,11 @@ Intakes represent the status of animals as they arrive at the Animal Center. All
 - [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
-
->>>>>>> 16bf487dec1b0a16d6e3b99a72edc0967adafe90
-
 #### Database
 The following is a provisional database which was used during the planning phase.
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
 
-<<<<<<< HEAD
-##### Database Integration
-For this project, we utilized PostgresSQL and fully integrated the database into our project.
-=======
 #### Database Integration
 
 For this project, we utilized PostgresSQL and fully integrated the database into our project.
@@ -150,7 +137,6 @@ Random Forest Classification - This model produces good predictions, and is capa
 ## Resources 
 ### Data
 [City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services) -  The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
->>>>>>> 16bf487dec1b0a16d6e3b99a72edc0967adafe90
 
 - The database contains static data captured from the Austin Animal Center website, and census data. The three tables within the database which were used for the final dataset are:
     - Intake_df
