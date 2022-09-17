@@ -134,6 +134,8 @@ Random Forest Classification - This model produces good predictions, and is capa
 
 [Outcome Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data) - Outcome represents the status of animals as they leave the Animal Center
 
+[Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) - Google slide for Segment 2.
+
 ### Software
 
 
