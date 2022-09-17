@@ -67,7 +67,7 @@ The following is a provisional machine learning model which was used during the 
 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
-#### Data Analysis (Refer slides for details)
+#### Data Analysis - *(Refer slides for details)*
 
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
 
@@ -75,11 +75,11 @@ The data analysis process began with the consideration of two datasets from Aust
 
 2. [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 
-### Data Analysis & Machine Learning.
+### Data Analysis & Machine Learning
 
 - Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
-**Preliminary Data Preprocessing:**
+1. **Preliminary Data Preprocessing:**
 
 - Each dataset was cleaned by removing bad or erroneous data.
 
@@ -87,7 +87,7 @@ The data analysis process began with the consideration of two datasets from Aust
 
 - The intake and outcome datasets were merged based on unique identifier (as described in the Database section) for further analysis.
 
-**Preliminary Feature Engineering and Preliminary Feature Selection:**
+2. **Preliminary Feature Engineering and Preliminary Feature Selection:**
 
   * For the intake & outcome datasets, The *Age upon Intake* column was a string containing (days, weeks, years etc.), the column was split and then *Age Upon Intake(days)* & *Age Upon Intake(years)* was calculated. We used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
 
@@ -101,18 +101,28 @@ The data analysis process began with the consideration of two datasets from Aust
   
   * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed (i.e. Pit Bull, Akita, Chihuahua)and date calculations.
   
-  * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using sqlalchemy.
+  * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using SQLAlchemy.
 
-**Description of how data was split into training and testing sets.**
+3. **Description of how data was split into training and testing sets.**
 
-* Toget the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
-* Age, Breed, Color, Intake type, Intake Condition & Outcome Type are considered.
-* We split our analysis for Dogs and Cats and their Success/Failure of getting Adopted/Return-to-Owner/Rto-Adopted.
+* To get the training and test data, the combined data from intake and outcome was used. [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv)
+
+* Age, Breed, Color, Intake type, Intake Condition & Outcome Type the columns used during this process.
+
+* Dogs and Cats were split to allow deeper evaluation into each species and what their success/failure of getting either adopted, returned-to-owner, or RTO-Adopted.
+
 * Hot encoding is performed for each of above categories to get the data ready for ML.
+
 * The data is split into X and y. Where below are the features 
-  - X = The hot encoded values of the following features
-    ‘age_upon_intake(days)’ ’age_upon_outcome(days)’ ’days_in_shelter ’ ’intake_condition’ ‘color_intake’ ‘breed_intake’ ’intake_type’
-  - Y = ‘outcome_type’ encoded for Success and Failure.
+ > X = The hot encoded values of the following features:
+    - age_upon_intake(days)
+    - age_upon_outcome(days)
+    - days_in_shelter
+    - intake_condition
+    - color_intake
+    - breed_intake
+    -intake_type
+ > Y = ‘outcome_type’ encoded for Success and Failure.
 
 ✓ Explanation of model choice, including limitations and benefits.
 
