@@ -79,7 +79,7 @@ The data analysis process began with the consideration of two datasets from Aust
 
 - Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
-1. #### Preliminary Data Preprocessing:**
+1. #### Preliminary Data Preprocessing:
 
     - Each dataset was cleaned by removing bad or erroneous data.
 
@@ -103,7 +103,7 @@ The data analysis process began with the consideration of two datasets from Aust
   
      * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using SQLAlchemy.
 
-3. **Description of how data was split into training and testing sets.**
+3. #### Description of how data was split into training and testing sets.
 
     * To get the training and test data, the combined data from intake and outcome was used. [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv)
 
@@ -134,31 +134,29 @@ We used Logistic Regression and Random Forest Classification models to analyze t
 **Random Forest Classification**
 > This model produces good predictions, and is capable of handling large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
 
-### ML results For Dogs
+## Results 
 
-#### Confusion matrix  - 
+### Machine Learning
+
+### Dogs
+
+**Confusion matrix** 
 ![image](https://user-images.githubusercontent.com/98556229/190839409-44201de9-4fe0-4269-92df-ffa8c17261e9.png)
 
-#### Plotting of confusion matrix 
+**Plotting of confusion matrix**
 ![image](https://user-images.githubusercontent.com/98556229/190839464-fcfe1f1d-68db-41e7-9a23-273fe6116fb4.png)
 
-#### List of features sorted with feature importance 
+**List of features sorted with feature importance**
 ![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
 
 
-### ML results For Cats
-#### Confusion Matrix 
+### Cats
+**Confusion matrix** 
 ![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
 
-#### Plotting of confusion matrix 
+**Plotting of confusion matrix**
 ![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
 
 
-#### List of features sorted with feature importance 
+**List of features sorted with feature importance**
 ![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
-
-
-#### List of features sorted with feature importance 
-![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
-
-## Results 
