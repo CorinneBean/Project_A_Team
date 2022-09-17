@@ -1,16 +1,6 @@
 # Austin Animal Center
 ## Project Overview 
 
-## Resources 
-### Data
-[City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services) -  The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
-
-[Intake Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/data) - Intake represents the status of animals as they enter the Animal Center
-
-[Outcome Data](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Outcomes/9t4d-g238/data) - Outcome represents the status of animals as they leave the Animal Center
-
-### Software
-
 ### Purpose
 Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (ACC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
 
@@ -32,8 +22,7 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 ### Communication Protocols
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
 
-### Workflow
-#### Machine Learning Model
+### Machine Learning Model
 The following is a provisional machine learning model which was used during the planning phase.
 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
@@ -47,7 +36,7 @@ Intakes represent the status of animals as they arrive at the Animal Center. All
 - [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
-#### Database
+### Database
 The following is a provisional database which was used during the planning phase.
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
