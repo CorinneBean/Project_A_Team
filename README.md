@@ -11,7 +11,7 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 4. Average dog and cat intake in a week?
 5. Average time in the shelter by age ?
 
-### Roles
+### Team Roles
 | Roles         | Responsibility     | Name          |
 | ------------- |:------------------:| -------------:|
 | Square        | Github             | Corinne       |
@@ -41,35 +41,36 @@ The following is a provisional database which was used during the planning phase
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
 
-#### Database Integration
+### Database Integration
 
 For this project, we utilized PostgresSQL and fully integrated the database into our project.
 
-* Database stores static data for use during the project
-  - Database stores multiple data tables used for compiling the final dataset.
-* Database interfaces with the project in some format (e.g., scraping updates the database)
-  - Database interfaces with the project using Jupyter Notebook Pandas and sqlalchemy to export the dfs into the Postgres AAC database and create the   tables. After the tables have been joined and data fields manipulated, sqlalchemy is used to connect to the database and import the final sql table back to Jupyter Notebooks to use for the machine learning.
-  
-* Includes at least two tables (or collections, if using MongoDB)
-  - The AAC database includes three tables used for the final dataset.
-* Includes at least one join using the database language (not including any joins in Pandas)
-  - SQL is used to join the three tables together and perform data manipulation on number, character and date columns.
-* Includes at least one connection string (using SQLAlchemy or PyMongo)
-  - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
+- The database contains static data captured from the Austin Animal Center website, and census data. The three tables within the database which were used for the final dataset are:
+    - Intake_df
+    - Outcome_df
+    - Zipcode_df
+
+- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database. Once all the data was exported tables were created within the database.
+
+- Both inner and left joins were utilized with SQL to join the three tables together. Data was then manipulate on number, character and date columns.
+
+- Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
 
 #### Data Analysis & Machine Learning.
 
-– Data analysis is performed on the intake and outcomes data containing large dataset of 12 columns and 144k rows each.
-– To analyze the Successful/Unsuccessful outcome of Adoption or relocation of pets based on data.
+– Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
-✓ Description of preliminary data preprocessing
+**Preliminary Data Preprocessing:**
 
-  * Clean up of entries from each dataset and to get rid of bad or erroneous data.
-  * The columns that were entered as Strings were converted to numeric/date fields so that it’s helpful for Machine Learning models.
-  * Next in the database we merged the intake and outcome datasets based on unique identifier (as described in the Database section) for further analysis.
+- Each dataset was cleaned by removing bad or erroneous data.
 
-✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process.
+- The columns that were entered as Strings were converted to numeric/date fields so that it’s helpful for Machine Learning models.
+
+- The intake and outcome datasets were merged based on unique identifier (as described in the Database section) for further analysis.
+
+**Preliminary Feature Engineering and Preliminary Feature Selection:**
+
   * For the intake & outcome datasets , The "Age upon Intake" column was a string containing (days, weeks, years etc.), the column was split and then "Age Upon Intake(days)" & "Age Upon Intake(years)" was calculated. Similar we used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
   * Created a new column - Intake Frequency as in how many times a same animal with unique Animal ID is brought to AAC.
   * Cumulative frequency is #4 is calculated for each row based on the Intake Time and date and time in Ascending order.
