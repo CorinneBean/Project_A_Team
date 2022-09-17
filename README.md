@@ -43,6 +43,17 @@ The following is a provisional machine learning model which was used during the 
 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
+#### Data Analysis.(Refer slides for details)
+
+The data analysis process began with the consideration of two datasets from Austin Animal Center. 
+- Austin_Animal_Center_Intakes.csv 
+Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.
+
+- Austin_Animal_Center_Outcomes.csv
+The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
+
+
+
 #### Database
 The following is a provisional database which was used during the planning phase.
 
