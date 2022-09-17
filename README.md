@@ -77,7 +77,7 @@ The data analysis process began with the consideration of two datasets from Aust
 
 ### Data Analysis & Machine Learning
 
-- Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
+Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
 1. #### Preliminary Data Preprocessing:
 
