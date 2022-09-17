@@ -75,6 +75,72 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 * Includes at least one connection string (using SQLAlchemy or PyMongo)
   - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
+
+#### Data Analysis & Machine Learning.
+
+– Dataanalysisisperformedontheintakeandoutcomesdatacontaining large dataset of 12 columns and 144k rows each.
+– ToanalyzetheSuccessful/UnsuccessfuloutcomeofAdoptionor relocation of pets based on data
+
+✓ Description of preliminary data preprocessing
+
+  * Clean up of entries from each dataset and to get rid of bad or erroneous data.
+  * The columns that were entered as Strings were converted to numeric/date fields so that it’s helpful for Machine Learning models.
+  * Next in the database we merged the intake and outcome datasets based on unique identifier (as described in the Database section) for further analysis.
+
+✓ Description of preliminary feature engineering and preliminary feature selection, including their decision-making process.
+  * For the intake & outcome datasets , The "Age upon Intake" column was a string containing (days, weeks, years etc.), the column was split and then "Age Upon Intake(days)" & "Age Upon Intake(years)" was calculated. Similar we used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
+  * Created a new column - Intake Frequency as in how many times a same animal with unique Animal ID is brought to AAC.
+  * Cumulative frequency is #4 is calculated for each row based on the Intake Time and date and time in Ascending order.
+  * Once loaded into Postgres SQL tables, the files were altered to create primary key off the (“animal_id_intake”,” order_of_intake”) and (“animal_id_outcome”,” order_of_outcome”) as well as altering the date fields. The zipcode table was altered to create a primary key of “index_id” that joins to the index_id_intake.
+  * Based on the new primary keys made up of a combination of Compound key from intake_df (animal_id_intake & order_of_intake) and outcome_df (animal_id_outcome & order_of_outcome), the tables are joined along with zipcode to get a combined dataset containing both data together.
+  * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed, if it contained Pit Bull and date calculations.
+  * The acc_intake_outcome and acc_intake_available were then exported to "acc_intake_outcome.csv" & "acc_intake_available.csv" and also connected to the machine learning script using sqlalchemy.
+
+✓ Description of how data was split into training and testing sets.
+
+* Toget the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
+* Age, Breed, Color, Intake type, Intake Condition & Outcome Type are considered.
+* We split our analysis for Dogs and Cats and their Success/Failure of getting Adopted/Return-to-Owner/Rto-Adopted.
+* Hot encoding is performed for each of above categories to get the data ready for ML.
+* The data is split into X and y. Where below are the features 
+  - X = The hot encoded values of the following features
+    ‘age_upon_intake(days)’ ’age_upon_outcome(days)’ ’days_in_shelter ’ ’intake_condition’ ‘color_intake’ ‘breed_intake’ ’intake_type’
+  - Y = ‘outcome_type’ encoded for Success and Failure.
+
+✓ Explanation of model choice, including limitations and benefits.
+
+We used Logistic Regression and Random Forest Classification models to analyze the data.
+Logistic Regression - is performed when we are expecting a Binary Outcome - Here we are running the ML model to determine if Dog / Cat will have success or Failure as outcome for given categories or features in consideration.
+
+Random Forest Classification - This model produces good predictions, and is capable to handle large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
+
+## ML results For Dogs
+
+#### Confusion matrix  - 
+![image](https://user-images.githubusercontent.com/98556229/190839409-44201de9-4fe0-4269-92df-ffa8c17261e9.png)
+
+#### Plotting of confusion matrix 
+![image](https://user-images.githubusercontent.com/98556229/190839464-fcfe1f1d-68db-41e7-9a23-273fe6116fb4.png)
+
+
+#### List of features sorted with feature importance 
+![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
+
+
+## ML results For Cats
+
+#### Confusion Matrix 
+![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
+
+#### Plotting of confusion matrix 
+![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
+
+
+#### List of features sorted with feature importance 
+![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
+
+
+
 ## Resources 
 ### Data
 [City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services) -  The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
