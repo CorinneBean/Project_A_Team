@@ -81,49 +81,48 @@ The data analysis process began with the consideration of two datasets from Aust
 
 1. **Preliminary Data Preprocessing:**
 
-- Each dataset was cleaned by removing bad or erroneous data.
+    - Each dataset was cleaned by removing bad or erroneous data.
 
-- The columns that were entered as Strings were converted to numeric/date fields so that it’s helpful for Machine Learning models.
+    - The columns that were entered as Strings were converted to numeric/date fields so that it’s helpful for Machine Learning models.
 
-- The intake and outcome datasets were merged based on unique identifier (as described in the Database section) for further analysis.
+    - The intake and outcome datasets were merged based on unique identifier (as described in the Database section) for further analysis.
 
 2. **Preliminary Feature Engineering and Preliminary Feature Selection:**
 
-  * For the intake & outcome datasets, The *Age upon Intake* column was a string containing (days, weeks, years etc.), the column was split and then *Age Upon Intake(days)* & *Age Upon Intake(years)* was calculated. We used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
+    * For the intake & outcome datasets, The *Age upon Intake* column was a string containing (days, weeks, years etc.), the column was split and then *Age Upon Intake(days)* & *Age Upon Intake(years)* was calculated. We used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
 
-  * A new column was created, Intake Frequency, which was used to evaluate how many times the same unique Animal ID is brought to AAC.
+    * A new column was created, Intake Frequency, which was used to evaluate how many times the same unique Animal ID is brought to AAC.
   
-  * Cumulative frequency is calculated for each row based on the Intake Time and date, and time in Ascending order.
+     * Cumulative frequency is calculated for each row based on the Intake Time and date, and time in Ascending order.
   
-  * Once the data was loaded into Postgres SQL tables, the data was manipulated to create a primary key off the *animal_id_intake* and *order_of_intake* tables, and *animal_id_outcome* and *order_of_outcome* tables. The zipcode table was altered to create a primary key of *index_id* that joins to the index_id_intake.
+    * Once the data was loaded into Postgres SQL tables, the data was manipulated to create a primary key off the *animal_id_intake* and *order_of_intake* tables, and *animal_id_outcome* and *order_of_outcome* tables. The zipcode table was altered to create a primary key of *index_id* that joins to the index_id_intake.
   
-  * The new primary keys was made up of a combination of Compound key from *intake_df (animal_id_intake & order_of_intake)* and *outcome_df (animal_id_outcome & order_of_outcome)*, the tables are joined along with zipcode to get a combined dataset containing both data together.
+    * The new primary keys was made up of a combination of Compound key from *intake_df (animal_id_intake & order_of_intake)* and *outcome_df (animal_id_outcome & order_of_outcome)*, the tables are joined along with zipcode to get a combined dataset containing both data together.
   
-  * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed (i.e. Pit Bull, Akita, Chihuahua)and date calculations.
+    * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed (i.e. Pit Bull, Akita, Chihuahua)and date calculations.
   
-  * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using SQLAlchemy.
+     * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using SQLAlchemy.
 
 3. **Description of how data was split into training and testing sets.**
 
-* To get the training and test data, the combined data from intake and outcome was used. [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv)
+    * To get the training and test data, the combined data from intake and outcome was used. [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv)
 
-* Age, Breed, Color, Intake type, Intake Condition & Outcome Type the columns used during this process.
+    * Age, Breed, Color, Intake type, Intake Condition & Outcome Type the columns used during this process.
 
-* Dogs and Cats were split to allow deeper evaluation into each species and what their success/failure of getting either adopted, returned-to-owner, or RTO-Adopted.
+    * Dogs and Cats were split to allow deeper evaluation into each species and what their success/failure of getting either adopted, returned-to-owner, or RTO-Adopted.
 
-* Hot encoding is performed for each of above categories to get the data ready for ML.
+    * Hot encoding is performed for each of above categories to get the data ready for ML.
 
-* The data is split into X and y. 
- - X = The hot encoded values of the following features:
-    - age_upon_intake(days)
-    - age_upon_outcome(days)
-    - days_in_shelter
-    - intake_condition
-    - color_intake
-    - breed_intake
-    -intake_type
- 
- - Y = *outcome_type* encoded for Success and Failure.
+    * The data is split into X and y. 
+        - X = The hot encoded values of the following features:
+            - age_upon_intake(days)
+            - age_upon_outcome(days)
+            - days_in_shelter
+            - intake_condition
+            - color_intake
+            - breed_intake
+            - intake_type
+         - Y = *outcome_type* encoded for Success and Failure.
 
 **Explanation of model choice, including limitations and benefits.**
 
