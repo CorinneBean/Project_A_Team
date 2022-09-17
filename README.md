@@ -13,6 +13,12 @@
 - [Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) 
 > Google slide for Segment 2.
 
+### Software
+- PostgresSQL
+- SQLAlchemy
+- Jupyter Notebook
+- Pandas
+
 ## Project Overview 
 
 ### Purpose
@@ -36,20 +42,6 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 ### Communication Protocols
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
 
-## Machine Learning Model
-The following is a provisional machine learning model which was used during the planning phase.
-
-![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
-
-#### Data Analysis (Refer slides for details)
-
-The data analysis process began with the consideration of two datasets from Austin Animal Center. 
-- [Austin_Animal_Center_Intakes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
-Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.
-
-- [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
-The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
-
 ## Database
 The following is a provisional database which was used during the planning phase.
 
@@ -70,6 +62,18 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 
 - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
+## Machine Learning Model
+The following is a provisional machine learning model which was used during the planning phase.
+
+![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
+
+#### Data Analysis (Refer slides for details)
+
+The data analysis process began with the consideration of two datasets from Austin Animal Center. 
+
+1. [Austin_Animal_Center_Intakes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
+
+2. [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 
 ### Data Analysis & Machine Learning.
 
@@ -111,7 +115,7 @@ Logistic Regression - is performed when we are expecting a Binary Outcome - Here
 
 Random Forest Classification - This model produces good predictions, and is capable to handle large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
 
-## ML results For Dogs
+### ML results For Dogs
 
 #### Confusion matrix  - 
 ![image](https://user-images.githubusercontent.com/98556229/190839409-44201de9-4fe0-4269-92df-ffa8c17261e9.png)
@@ -119,13 +123,11 @@ Random Forest Classification - This model produces good predictions, and is capa
 #### Plotting of confusion matrix 
 ![image](https://user-images.githubusercontent.com/98556229/190839464-fcfe1f1d-68db-41e7-9a23-273fe6116fb4.png)
 
-
 #### List of features sorted with feature importance 
 ![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
 
 
-## ML results For Cats
-
+### ML results For Cats
 #### Confusion Matrix 
 ![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
 
@@ -135,12 +137,6 @@ Random Forest Classification - This model produces good predictions, and is capa
 
 #### List of features sorted with feature importance 
 ![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
-
-
-
-
-
-### Software
 
 
 #### List of features sorted with feature importance 
