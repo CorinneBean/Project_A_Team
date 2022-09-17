@@ -21,17 +21,17 @@
 
 ## Project Overview 
 
-### Purpose
+#### Purpose
 Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (ACC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
 
-### Questions to Answer
+#### Questions to Answer
 1. What month has most intakes/outcomes
 2. Distribution of dog and cats.
 3. Where in Austin are most intakes coming from?
 4. Average dog and cat intake in a week?
 5. Average time in the shelter by age ?
 
-### Team Roles
+#### Team Roles
 | Roles         | Responsibility     | Name          |
 | ------------- |:------------------:| -------------:|
 | Square        | Github             | Corinne       |
@@ -39,7 +39,7 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 | Triangle      | Database           | Sharon        |
 | X             | Project Management | Ashley & Nick |
 
-### Communication Protocols
+#### Communication Protocols
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
 
 ## Database
@@ -89,15 +89,21 @@ The data analysis process began with the consideration of two datasets from Aust
 
 **Preliminary Feature Engineering and Preliminary Feature Selection:**
 
-  * For the intake & outcome datasets , The "Age upon Intake" column was a string containing (days, weeks, years etc.), the column was split and then "Age Upon Intake(days)" & "Age Upon Intake(years)" was calculated. Similar we used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
-  * Created a new column - Intake Frequency as in how many times a same animal with unique Animal ID is brought to AAC.
-  * Cumulative frequency is #4 is calculated for each row based on the Intake Time and date and time in Ascending order.
-  * Once loaded into Postgres SQL tables, the files were altered to create primary key off the (“animal_id_intake”,” order_of_intake”) and (“animal_id_outcome”,” order_of_outcome”) as well as altering the date fields. The zipcode table was altered to create a primary key of “index_id” that joins to the index_id_intake.
-  * Based on the new primary keys made up of a combination of Compound key from intake_df (animal_id_intake & order_of_intake) and outcome_df (animal_id_outcome & order_of_outcome), the tables are joined along with zipcode to get a combined dataset containing both data together.
-  * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed, if it contained Pit Bull and date calculations.
-  * The acc_intake_outcome and acc_intake_available were then exported to "acc_intake_outcome.csv" & "acc_intake_available.csv" and also connected to the machine learning script using sqlalchemy.
+  * For the intake & outcome datasets, The *Age upon Intake* column was a string containing (days, weeks, years etc.), the column was split and then *Age Upon Intake(days)* & *Age Upon Intake(years)* was calculated. We used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
 
-✓ Description of how data was split into training and testing sets.
+  * A new column was created, Intake Frequency, which was used to evaluate how many times the same unique Animal ID is brought to AAC.
+  
+  * Cumulative frequency is calculated for each row based on the Intake Time and date, and time in Ascending order.
+  
+  * Once the data was loaded into Postgres SQL tables, the data was manipulated to create a primary key off the *animal_id_intake* and *order_of_intake* tables, and *animal_id_outcome* and *order_of_outcome* tables. The zipcode table was altered to create a primary key of *index_id* that joins to the index_id_intake.
+  
+  * The new primary keys was made up of a combination of Compound key from *intake_df (animal_id_intake & order_of_intake)* and *outcome_df (animal_id_outcome & order_of_outcome)*, the tables are joined along with zipcode to get a combined dataset containing both data together.
+  
+  * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed (i.e. Pit Bull, Akita, Chihuahua)and date calculations.
+  
+  * The *acc_intake_outcome* and *acc_intake_available* were then exported to [acc_intake_outcome.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_outcome.csv) & [acc_intake_available.csv](https://github.com/CorinneBean/Project_A_Team/blob/d28600b902462c3f7fe4116c166b6e18cdef496c/Resources/Data/acc_intake_available.csv), and connected to the machine learning script using sqlalchemy.
+
+**Description of how data was split into training and testing sets.**
 
 * Toget the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
 * Age, Breed, Color, Intake type, Intake Condition & Outcome Type are considered.
