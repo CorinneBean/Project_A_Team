@@ -36,7 +36,7 @@ all_df<-all_df %>%
          breed_contains_pitbull=as.factor(breed_contains_pitbull),
          sex_upon_intake_subtype=as.factor(sex_upon_intake_subtype),
          sex_upon_intake=as.factor(sex_upon_intake),
-         final_status=as.factor(final_status)
+         outcome=as.factor(outcome)
 )
 
 #Make NA's 0
@@ -58,11 +58,23 @@ all_df<-filter(all_df, days_in_shelter >=0)
 all_dog_df<-filter(all_df, animal_type_intake=='Dog') 
 all_cat_df<-filter(all_df, animal_type_intake=='Cat')
 
+all_df_graph<-filter(all_df, outcome != 'Available' &
+                     (animal_type_intake == 'Cat' |
+                     animal_type_intake == 'Dog'))
+
+dog_df_graph<-filter(all_df, outcome != 'Available' &
+                       (animal_type_intake == 'Dog'))
+
+cat_df_graph<-filter(all_df, outcome != 'Available' &
+                       (animal_type_intake == 'Cat'))
+                       
+
+
 
 available_dog<-filter(all_dog_df, State=='Available')
 ##################################Dogs
 traindog<-filter(all_dog_df,((intake_year=='2013'| intake_year=='2014'|intake_year=='2015'|intake_year=='2016'|intake_year=='2017'|intake_year=='2018'|intake_year=='2019'|intake_year=='2020')
-& final_status== 'Successful'))
+& outcome== 'Successful'))
 
 #& (outcome_type=='Return to Owner'| outcome_type=='	
 #Adoption'| outcome_type=='Rto-Adopt')))
@@ -71,24 +83,28 @@ traindog<-filter(all_dog_df,((intake_year=='2013'| intake_year=='2014'|intake_ye
 testdog<-filter(dog_df,(outcome_year=='2021' | outcome_year=='2022'))
 
 ##########Graphing
-lm.graph<-ggplot(available_dog, 
+lm.graph<-ggplot(cat_df_graph, 
   aes(x=age_upon_intake.years., 
   y=days_in_shelter, 
-  label = outcome_type))+ 
-  geom_point(mapping=aes(color=outcome_type))+
+  label = outcome))+ 
+  geom_point(mapping=aes(color=outcome))+
   geom_smooth(method='lm', col="black")+
   theme_bw()+
-  scale_color_discrete("Status")+
-  labs(Title = "Dogs: Days in Shelter",
+  scale_color_discrete("Outcome")+
+  labs(Title = "Cat: Days in Shelter",
        x= "Age Upon Intake",
        y= "Days in Shelter"
        )
 lm.graph
 
-plot(days_in_shelter ~ age_upon_intake.days., data=all_dog_df)
+plot(days_in_shelter ~ age_upon_intake.days., data=dog_df_graph)
 
-boxplot(days_in_shelter~age_upon_intake.years., data=available_dog, main="Title", xlab="Age in Years",
+boxplot(days_in_shelter~intake_type, data=all_dog_df, main="Title", xlab="Age in Years",
         ylab="Days In Shelter")
+
+#box plot
+ggplot(data=cat_df_graph)+geom_bar(mapping = aes(x=intake_year, fill = outcome))
+
 
 p<-ggplot(all_df, aes(x=animal_type_intake,
                              y=count(index_id_intake),
