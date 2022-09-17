@@ -1,4 +1,17 @@
 # Austin Animal Center
+## Resources 
+### Data
+[City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services) -  The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
+
+- The database contains static data captured from the Austin Animal Center website, and census data. The three tables within the database which were used for the final dataset are:
+    - Intake_df
+    - Outcome_df
+    - Zipcode_df
+
+- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database. Once all the data was exported tables were created within the database. 
+
+[Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) - Google slide for Segment 2.
+
 ## Project Overview 
 
 ### Purpose
@@ -57,9 +70,9 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
 
-#### Data Analysis & Machine Learning.
+### Data Analysis & Machine Learning.
 
-– Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
+- Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
 **Preliminary Data Preprocessing:**
 
@@ -124,18 +137,7 @@ Random Forest Classification - This model produces good predictions, and is capa
 
 
 
-## Resources 
-### Data
-[City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services) -  The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
 
-- The database contains static data captured from the Austin Animal Center website, and census data. The three tables within the database which were used for the final dataset are:
-    - Intake_df
-    - Outcome_df
-    - Zipcode_df
-
-- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database. Once all the data was exported tables were created within the database. 
-
-[Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) - Google slide for Segment 2.
 
 ### Software
 
