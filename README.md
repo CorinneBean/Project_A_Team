@@ -140,24 +140,29 @@ We used Logistic Regression and Random Forest Classification models to analyze t
 
 ### Dogs
 
-**Confusion matrix** 
+**Confusion matrix**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839409-44201de9-4fe0-4269-92df-ffa8c17261e9.png)
 
 **Plotting of confusion matrix**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839464-fcfe1f1d-68db-41e7-9a23-273fe6116fb4.png)
 
 **List of features sorted with feature importance**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
 
 
 ### Cats
 
 **Confusion matrix**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
 
 **Plotting of confusion matrix**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
 
-
 **List of features sorted with feature importance**
+
 ![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
