@@ -5,11 +5,11 @@
 The Austin Animal Center is located in Austin, Texas, the "No Kill" city in the country. The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
 
 ### Questions to Answer
-1.  1). What month has most intakes/outcomes
-2). Distribution of dog and cats.
-3). Where in Austin are most intakes coming from?
-4.) Average dog and cat intake in a week?
-5). Average time in the shelter by age ?
+1. What month has most intakes/outcomes
+2. Distribution of dog and cats.
+3. Where in Austin are most intakes coming from?
+4. Average dog and cat intake in a week?
+5. Average time in the shelter by age ?
 
 ### Roles
 | Roles         | Responsibility     | Name          |
