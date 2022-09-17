@@ -79,7 +79,7 @@ The data analysis process began with the consideration of two datasets from Aust
 
 - Data analysis was performed using Machine Larning to determine the successful and unsuccessful outcome of each animal at the center. The datasets used in this analysis contained 12 columns and 144K rows each.
 
-1. **Preliminary Data Preprocessing:**
+1. #### Preliminary Data Preprocessing:**
 
     - Each dataset was cleaned by removing bad or erroneous data.
 
@@ -87,7 +87,7 @@ The data analysis process began with the consideration of two datasets from Aust
 
     - The intake and outcome datasets were merged based on unique identifier (as described in the Database section) for further analysis.
 
-2. **Preliminary Feature Engineering and Preliminary Feature Selection:**
+2. #### Preliminary Feature Engineering and Preliminary Feature Selection:
 
     * For the intake & outcome datasets, The *Age upon Intake* column was a string containing (days, weeks, years etc.), the column was split and then *Age Upon Intake(days)* & *Age Upon Intake(years)* was calculated. We used DateTime Series to get Intake Month, Intake year and Intake Weekday & Intake Hour are calculated.
 
