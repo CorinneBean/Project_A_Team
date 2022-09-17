@@ -31,10 +31,10 @@ The following is a provisional machine learning model which was used during the 
 #### Data Analysis (Refer slides for details)
 
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
-- ![Austin_Animal_Center_Intakes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
+- [Austin_Animal_Center_Intakes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
 Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.
 
-- ![Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
+- [Austin_Animal_Center_Outcomes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
 
@@ -63,8 +63,8 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 
 #### Data Analysis & Machine Learning.
 
-– Dataanalysisisperformedontheintakeandoutcomesdatacontaining large dataset of 12 columns and 144k rows each.
-– ToanalyzetheSuccessful/UnsuccessfuloutcomeofAdoptionor relocation of pets based on data
+– Data analysis is performed on the intake and outcomes data containing large dataset of 12 columns and 144k rows each.
+– To analyze the Successful/Unsuccessful outcome of Adoption or relocation of pets based on data.
 
 ✓ Description of preliminary data preprocessing
 
