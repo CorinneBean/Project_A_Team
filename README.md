@@ -45,7 +45,7 @@ The main source of communication for this group was conducted via Zoom and Slack
 ## Database
 The following is an ERD of the database and tables used for this project..
 
-![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
+![ERD](https://user-images.githubusercontent.com/87085239/190934132-7dbfd05a-a18d-4294-8807-36a001b37403.png)
 
 ### Database Integration
 
