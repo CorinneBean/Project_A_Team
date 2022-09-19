@@ -43,7 +43,7 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
 
 ## Database
-The following is an ERD and description of the database.
+The following is an ERD of the database and tables used for this project..
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
 
