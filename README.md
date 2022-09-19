@@ -43,7 +43,7 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
 
 ## Database
-The following is a provisional database which was used during the planning phase.
+The following is an ERD and description of the database.
 
 ![ERD](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ERD.png)
 
@@ -56,11 +56,11 @@ For this project, we utilized PostgresSQL and fully integrated the database into
     - Outcome_df
     - Zipcode_df
 
-- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database. Once all the data was exported tables were created within the database.
+- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database to create the tables. .
 
 - Both inner and left joins were utilized with SQL to join the three tables together. Data was then manipulate on number, character and date columns.
 
-- Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
+- Using a SQLAlchemy connection string to connect to the Postgres AAC database, the final tables were imported back into the Jupyter Notebook machine learning scripts.
 
 ## Machine Learning Model
 The following is a provisional machine learning model which was used during the planning phase.
