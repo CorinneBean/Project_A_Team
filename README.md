@@ -22,7 +22,7 @@
 ## Project Overview 
 
 #### Purpose
-Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (ACC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
+Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (AAC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
 
 #### Questions to Answer
 1. What month has most intakes/outcomes
