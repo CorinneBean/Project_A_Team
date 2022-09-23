@@ -2,11 +2,12 @@
 ## Clean_addresses_geocoding.ipynb
 ---------------------------------------------------------------------------
 
-From above JN we get the distinct and clean addresses that we can get the zip codes, geocoordinates and demographic data.
+From above JN we get the distinct and clean addresses that we can get the zip codes, geo-coordinates and demographic data.
 
 
 
 # data_refined.csv contains Intakes Found Location and are split into - Address ,City and State.
+
 # Here we run batch geocoding 
 
 # Total Addresses - 35862 distinct rows
