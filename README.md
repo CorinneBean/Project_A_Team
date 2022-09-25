@@ -65,11 +65,6 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 
 - Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
-## Machine Learning Model
-The following is a provisional machine learning model which was used during the planning phase.
-
-![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
-
 #### Data Analysis - *(Refer slides for details)*
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
 
