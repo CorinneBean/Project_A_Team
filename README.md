@@ -157,6 +157,5 @@ Random Forest Classification - This model produces good predictions, and is capa
 #### Plotting of confusion matrix 
 ![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
 
-
 #### List of features sorted with feature importance 
 ![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
