@@ -14,7 +14,10 @@
 > Google slide presentation
 
 - [Story Board](https://public.tableau.com/app/profile/nick.foley3714/viz/FinalProject_16622592472410/Story1?publish=yes) 
-> Google slide presentation
+> Tableau Story Board 
+
+- [Dashboard](https://public.tableau.com/app/profile/nick.foley3714/viz/FinalProject_16622592472410/Dashboard1?publish=yes) 
+> Tableau Dashboard
 
 ### Software
 - PostgresSQL
