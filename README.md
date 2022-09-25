@@ -63,7 +63,7 @@ For this project, we utilized PostgresSQL and fully integrated the database into
 
 - Both inner and left joins were utilized with SQL to join the three tables together. Data was then manipulate on number, character and date columns.
 
-- Using a SQLAlchemy connection string to connect to the Postgres AAC database, the final tables were imported back into the Jupyter Notebook machine learning scripts.
+- Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
 ## Machine Learning Model
 The following is a provisional machine learning model which was used during the planning phase.
@@ -72,21 +72,6 @@ The following is a provisional machine learning model which was used during the 
 
 #### Data Analysis - *(Refer slides for details)*
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
-
-### Database Integration
-
-For this project, we utilized PostgresSQL and fully integrated the database into our project.
-
-- The database contains static data captured from the Austin Animal Center website, and census data. The three tables within the database which were used for the final dataset are:
-    - Intake_df
-    - Outcome_df
-    - Zipcode_df
-
-- The Database interfaces with the project using Jupyter Notebook, Pandas and SQLAlchemy. These tools aided in the export of the dataframes into the Postgres AAC database. Once all the data was exported tables were created within the database.
-
-- Both inner and left joins were utilized with SQL to join the three tables together. Data was then manipulate on number, character and date columns.
-
-- Three connection strings using SQLAlchemy export the data into the Postgres database and create the tables. Two connection strings import the final dataset into the Jupyter Notebook machine learning scripts.
 
 ## Machine Learning Model
 The following is a provisional machine learning model which was used during the planning phase.
