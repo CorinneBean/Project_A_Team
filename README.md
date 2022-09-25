@@ -2,11 +2,7 @@
 ## Resources 
 ### Data
 - [City of Austin Data Center](https://data.austintexas.gov/browse?City-of-Austin_Department-=Animal+Services)
-<<<<<<< HEAD
-> The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
-=======
 >The city of Austin’s online repository of statistical data. From this data source we downloaded Animal Center Intake and Outcome data from Oct, 1st 2013 to present. All animals receive a unique Animal ID during intake.
->>>>>>> main
 
 - [Intake Data](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
 > Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.
@@ -14,11 +10,7 @@
 - [Outcomes Data](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 > The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
-<<<<<<< HEAD
-- [Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p)
-=======
 - [Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) 
->>>>>>> main
 > Google slide for Segment 2.
 
 ### Software
@@ -29,28 +21,17 @@
 
 ## Project Overview 
 
-<<<<<<< HEAD
-### Purpose
-Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (ACC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
-
-### Questions to Answer
-=======
 #### Purpose
 Austin, Texas is the largest "No Kill" city in the country, and home of the Austin Animal Center (AAC). The center reports that 90% of animals are either adopted, returned to their owner, or transferred to a rescue. Our interest in this topic is to determine what outcome would be expected for each breed, particularly for breeds considered “violent” or aggressive, and compare if younger or older pets are more likely to find a home. Another interest we had was looking at the geographical area of the City of Austin to determine if there is an area within the city that has a higher number of stray population.
 
 #### Questions to Answer
->>>>>>> main
 1. What month has most intakes/outcomes
 2. Distribution of dog and cats.
 3. Where in Austin are most intakes coming from?
 4. Average dog and cat intake in a week?
 5. Average time in the shelter by age ?
 
-<<<<<<< HEAD
-### Team Roles
-=======
 #### Team Roles
->>>>>>> main
 | Roles         | Responsibility     | Name          |
 | ------------- |:------------------:| -------------:|
 | Square        | Github             | Corinne       |
