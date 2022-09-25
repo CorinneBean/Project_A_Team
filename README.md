@@ -119,26 +119,25 @@ Logistic Regression - is performed when we are expecting a Binary Outcome - Here
 
 Random Forest Classification - This model produces good predictions, and is capable to handle large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
 
-## ML results For Dogs
+**Explanation of changes in model choice (if changes occurred between the Segment 2 and Segment 3 deliverables**
+For Segment 2 , for Dogs - recall values was very low and it was a perfect case of Class imbalance where Success(Adopted) & Failure(Other) situations in which the existing classes in a dataset aren't equally represented. 
+<img width="148" alt="image" src="https://user-images.githubusercontent.com/98556229/192126961-35f190fd-230b-42ee-881e-41bd358cb8de.png">
 
-#### Confusion matrix  - 
-![image](https://user-images.githubusercontent.com/98556229/190839409-44201de9-4fe0-4269-92df-ffa8c17261e9.png)
+<img width="248" alt="image" src="https://user-images.githubusercontent.com/98556229/192126966-426a83a8-4284-4fb3-a82b-75e1cdeefc16.png">
 
-#### Plotting of confusion matrix 
-![image](https://user-images.githubusercontent.com/98556229/190839464-fcfe1f1d-68db-41e7-9a23-273fe6116fb4.png)
+To Improve the above problem of class imbalance - 
+* We re-categorized the outcome_type to get the Success(Adopted) & Failure(Other) situations.
+* Splitting the color_intake into 2 separate color_1 and color_2 based on the delimiter.
+
+**Update & improved results from ML** 
+* With new data columns Confusion Matrix for Dog is -
+
+<img width="648" alt="image" src="https://user-images.githubusercontent.com/98556229/192126993-8013cc3c-f956-4569-a978-ccffd622eae8.png">
 
 
-#### List of features sorted with feature importance 
-![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
+* With new data columns Confusion Matrix for Cat is -
+
+<img width="651" alt="image" src="https://user-images.githubusercontent.com/98556229/192127033-497bf1c8-73d4-4294-9b54-417c1dfdbc6a.png">
 
 
-## ML results For Cats
 
-#### Confusion Matrix 
-![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
-
-#### Plotting of confusion matrix 
-![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
-
-#### List of features sorted with feature importance 
-![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
