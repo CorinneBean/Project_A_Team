@@ -104,7 +104,7 @@ The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in
   * Using case statements columns were split up and restructured for analysis such as subtypes for breeds based on the predominate identified breed, if it contained Pit Bull and date calculations.
   * The acc_intake_outcome and acc_intake_available were then exported to "acc_intake_outcome.csv" & "acc_intake_available.csv" and also connected to the machine learning script using sqlalchemy.
 
-**How data was split into training and testing sets.
+**How data was split into training and testing sets.**
 
 * Toget the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
 * Age, Breed, Color, Intake type, Intake Condition & Outcome Type are considered.
@@ -115,7 +115,7 @@ The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in
     ‘age_upon_intake(days)’ ’age_upon_outcome(days)’ ’days_in_shelter ’ ’intake_condition’ ‘color_intake’ ‘breed_intake’ ’intake_type’
   - Y = ‘outcome_type’ encoded for Success and Failure.
 
-**Model choice, limitations and benefits.
+**Model choice, limitations and benefits.**
 
 We used Logistic Regression and Random Forest Classification models to analyze the data.
 Logistic Regression - is performed when we are expecting a Binary Outcome - Here we are running the ML model to determine if Dog / Cat will have success or Failure as outcome for given categories or features in consideration.
