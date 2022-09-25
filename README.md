@@ -11,7 +11,10 @@
 > The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
 - [Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) 
-> Google slide for Segment 2.
+> Google slide presentation
+
+- [Story Board](https://public.tableau.com/app/profile/nick.foley3714/viz/FinalProject_16622592472410/Story1?publish=yes) 
+> Google slide presentation
 
 ### Software
 - PostgresSQL
