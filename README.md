@@ -139,11 +139,6 @@ Logistic Regression - is performed when we are expecting a Binary Outcome - Here
 
 Random Forest Classification - This model produces good predictions, and is capable to handle large datasets efficiently. This model helps in producing higher level of accuracy. Below is the Confusion Matrix for Dogs and Cats.
 
-
-
-
-
-
 ## ML results For Dogs
 
 #### Confusion matrix  - 
@@ -168,9 +163,6 @@ Random Forest Classification - This model produces good predictions, and is capa
 
 #### List of features sorted with feature importance 
 ![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
-
-
-
 
 =======
 1. [Austin_Animal_Center_Intakes.csv](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Intakes.csv)
