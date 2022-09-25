@@ -65,11 +65,8 @@ The following is a provisional machine learning model which was used during the 
 ![ML Mockup](https://github.com/CorinneBean/Project_A_Team/blob/37e725957dba0e937832051c41ce61b0a53d2517/Images/ML%20Mockup.png)
 
 #### Data Analysis - *(Refer slides for details)*
->>>>>>> main
-
 The data analysis process began with the consideration of two datasets from Austin Animal Center. 
 
-<<<<<<< HEAD
 ### Database Integration
 
 For this project, we utilized PostgresSQL and fully integrated the database into our project.
@@ -247,24 +244,3 @@ We used Logistic Regression and Random Forest Classification models to analyze t
 
 ![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
 
-
-<<<<<<< HEAD
-#### List of features sorted with feature importance 
-![image](https://user-images.githubusercontent.com/98556229/190839439-d6dd3ed6-3db0-48c5-bdd3-8fea854d721d.png)
-
-## Results 
-=======
-### Cats
-
-**Confusion matrix**
-
-![image](https://user-images.githubusercontent.com/98556229/190839479-d5727396-0f7d-4261-8412-08a0847def5b.png)
-
-**Plotting of confusion matrix**
-
-![image](https://user-images.githubusercontent.com/98556229/190839511-c732086f-2463-48e6-bad8-6a4bc87b5b46.png)
-
-**List of features sorted with feature importance**
-
-![image](https://user-images.githubusercontent.com/98556229/190839521-d01e865f-fb9e-404e-a60c-3639f35847f3.png)
->>>>>>> main
