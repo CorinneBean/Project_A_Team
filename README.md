@@ -40,7 +40,9 @@ Austin, Texas is the largest "No Kill" city in the country, and home of the Aust
 | X             | Project Management | Ashley & Nick |
 
 ## Database
+
 The following is a provisional database which was used during the planning phase.
+
 =======
 #### Communication Protocols
 The main source of communication for this group was conducted via Zoom and Slack. An individual Slack channel was created specific to this group: final-project. A Google drive folder was also created that allowed the sharing of documents related to the preparation of this project. Team members meet via Zoom each Tuesday & Thursday from 7-9 pm CST.
