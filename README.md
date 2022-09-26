@@ -103,7 +103,7 @@ The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in
 
 **How data was split into training and testing sets.**
 
-* Toget the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
+* To get the train and test data,we consider the combined data from intake and outcome. (acc_intake_outcome.csv)
 * Age, Breed, Color, Intake type, Intake Condition & Outcome Type are considered.
 * We split our analysis for Dogs and Cats and their Success/Failure of getting Adopted/Return-to-Owner/Rto-Adopted.
 * Hot encoding is performed for each of above categories to get the data ready for ML.
