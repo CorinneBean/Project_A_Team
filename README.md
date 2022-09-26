@@ -10,7 +10,7 @@
 - [Outcomes Data](https://github.com/CorinneBean/Project_A_Team/blob/e8b7306861dd99d65887e9fa9b7fe92c5a36d103/Resources/Austin_Animal_Center_Outcomes.csv)
 > The Outcomes data set reflects that Austin, TX. is the largest "No Kill" city in the country. All animals received with unique Animal IDs are safely adopted or transferred and this data represents that.
 
-- [Google Slides](https://docs.google.com/presentation/d/1K8pBQ0ttgLPquqlpsvYnzDSHKgBfmPmnp6c2Xg19fgM/edit#slide=id.p) 
+- [Google Slides](https://docs.google.com/presentation/d/15xGqJdLe10L41yKeD66S8l1UpVxQOdjRUX9_Ajexw4U/edit#slide=id.p) 
 > Google slide presentation
 
 - [Story Board](https://public.tableau.com/app/profile/nick.foley3714/viz/FinalProject_16622592472410/Story1?publish=yes) 
