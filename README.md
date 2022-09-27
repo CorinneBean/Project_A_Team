@@ -139,6 +139,31 @@ To Improve the above problem of class imbalance -
 
 <img width="651" alt="image" src="https://user-images.githubusercontent.com/98556229/192127033-497bf1c8-73d4-4294-9b54-417c1dfdbc6a.png">
 
+### Neural Network VS Logistic Regression, Random Forest, and SVM
+
+Using the dataset with known addresses, we initially planned to create a neural network model using demographics from the most recent census to predict outcomes, but the dataset only included intake locations, which had no bearing on the outcomes. Instead, using that narrowed dataset we ran a keras tensorflow algorithm to predict outcomes based on the same criteria as above; however features were narrowed differently. Breeds were categorized based on the most prominent breed listed in their description into groups, which were mostly based on AKC groups including herding, sporting, nonsporting, terrier, toy. Breeds that had over 1000 animals or animals that grouped easily together were kept separately (eg pit bulls remained in their own category, Labrador and golden retrievers were grouped as retrievers, long hair and short hair chihuahuas were grouped as chihuahuas, etc). This reduced breeds from over 3000 to 12. Colors were also consolidated down from nearly 400 to 14 by moving rarer color combinations into an Others category and cleaning up color descriptions (ie changing “chocolate” to brown and “beige” to tan). 
+
+![image](https://user-images.githubusercontent.com/101822948/192611659-84df9a6b-c84c-4dfd-b572-90f8c7930ce4.png)
+
+The tensorflow model was then compared to Logistic Regression, Random Forest, and SVM models using the same dataset. All the models showed high accuracy in that they mostly correctly predicted successful outcomes, but most failed to predict failed outcomes as indicated by the low recall scores. 
+
+![image](https://user-images.githubusercontent.com/101822948/192611933-370424cd-6085-48a0-b613-63f6b23edfcc.png)
+
+![image](https://user-images.githubusercontent.com/101822948/192612088-cdd6302b-a299-43f0-a300-b76abe3b0a3d.png)
+
+Based on f1 scores the Random Forest Model performed best out of the supervised machine learning models.
+
+## Conclusions
+
+More data is needed to improve the recall and precision scores of the machine learning models. 
+
+From analysis of the data, most of the animal intakes occur along the I35 corridor and most animals that are brought to the shelter are adopted or returned to their owner in around 11 days.
+
+We would suggest that the AAC expend more in education in outreach in the zip codes with the most intakes including providing mobile low or no cost vaccine or spay/neuter clinics in these areas as well as education on the costs of pet ownership, which in on the rise.
+
+Additional analysis could include looking at outcome addresess, if that becomes available as well as plotting veterinary clincis in the area to see if there is gaps in care in some areas. 
+
+For our group, some improvements would include better incorporating the demographics information into intake analysis as well as having improved communication on timelines.
 
 
 
